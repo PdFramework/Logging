@@ -1,4 +1,5 @@
 ﻿using NLog;
+using Newtonsoft.Json;
 
 namespace PeinearyDevelopment.Framework.Logging.NLog.Core.Extensions
 {
@@ -18,7 +19,9 @@ namespace PeinearyDevelopment.Framework.Logging.NLog.Core.Extensions
 
         public static void LogActionTakenEvent(ActionTakenEvent actionTakenEvent)
         {
-            LogManager.GetLogger("ActionTakenEventLogger").Info(GenerateLogEventInfo(actionTakenEvent));
+            var logEventInfo = GenerateLogEventInfo(actionTakenEvent);
+            logEventInfo.Properties["Object"] = JsonConvert.SerializeObject(actionTakenEvent.Object);
+            LogManager.GetLogger("ActionTakenEventLogger").Info(logEventInfo);
         }
 
         private static LogEventInfo GenerateLogEventInfo<TEvent>(TEvent tEvent)
