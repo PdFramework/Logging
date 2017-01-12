@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLog.Core", "NLog.Core.csproj", "{4B37BBA3-45AF-43EE-8455-F80692616139}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLog.Core", "NLog.Core\NLog.Core.csproj", "{4B37BBA3-45AF-43EE-8455-F80692616139}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "..\Contracts\Contracts.csproj", "{AC9B6D81-1C27-41C5-A867-23A937E97AB1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{AC9B6D81-1C27-41C5-A867-23A937E97AB1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLog.Console", "NLog.Console\NLog.Console.csproj", "{4535F390-8FB0-48CC-A52A-7CBEB3C0D746}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sandbox", "Sandbox", "{2EB632C3-6DCD-4C57-9938-CF84CCB18800}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{24C49660-E0A1-466B-89ED-FC5A8CEA3D9C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Sandbox\Console\Console.csproj", "{24C49660-E0A1-466B-89ED-FC5A8CEA3D9C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLog.Web.Http", "NLog.Web.Http\NLog.Web.Http.csproj", "{C15DC40B-85D0-42F1-BE04-2FD85FC3952D}"
 EndProject
@@ -23,9 +23,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLog.Web.Mvc.WebActivator",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLog.Web", "NLog.Web\NLog.Web.csproj", "{941295CD-3D8C-425D-8C46-B01B1944B1A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{83D33319-4F30-40FA-8FDC-747AE9A43867}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "Sandbox\WebApi\WebApi.csproj", "{83D33319-4F30-40FA-8FDC-747AE9A43867}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMvc", "WebMvc\WebMvc.csproj", "{31A6EB31-7186-410D-8F53-A4AEBCCD748A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMvc", "Sandbox\WebMvc\WebMvc.csproj", "{31A6EB31-7186-410D-8F53-A4AEBCCD748A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

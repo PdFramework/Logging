@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F94EB19B-EBBA-4010-8543-CAEAAE0D3029}</ProjectGuid>
+    <ProjectGuid>{C15DC40B-85D0-42F1-BE04-2FD85FC3952D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PeinearyDevelopment.Framework.Logging.NLog.Web.Http.WebActivator</RootNamespace>
-    <AssemblyName>PeinearyDevelopment.Framework.Logging.NLog.Web.Http.WebActivator</AssemblyName>
+    <RootNamespace>PeinearyDevelopment.Framework.Logging.NLog.Web.Http</RootNamespace>
+    <AssemblyName>PeinearyDevelopment.Framework.Logging.NLog.Web.Http</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -52,42 +48,30 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoggingWebActivator.cs" />
+    <Compile Include="GlobalErrorLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebApiLoggerConfigurer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NLog.Core.csproj">
+    <ProjectReference Include="..\NLog.Core\NLog.Core.csproj">
       <Project>{4B37BBA3-45AF-43EE-8455-F80692616139}</Project>
       <Name>NLog.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NLog.Web.Http\NLog.Web.Http.csproj">
-      <Project>{C15DC40B-85D0-42F1-BE04-2FD85FC3952D}</Project>
-      <Name>NLog.Web.Http</Name>
-    </ProjectReference>
     <ProjectReference Include="..\NLog.Web\NLog.Web.csproj">
-      <Project>{941295cd-3d8c-425d-8c46-b01b1944b1a5}</Project>
+      <Project>{941295CD-3D8C-425D-8C46-B01B1944B1A5}</Project>
       <Name>NLog.Web</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
